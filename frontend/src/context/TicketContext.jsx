@@ -17,7 +17,7 @@ export const TicketContextProvider=({children})=>{
      if(tickets.length==0){
          setLoading(true)
      }
-      let res=await api.get("/ticket")
+      let res=await api.get("/ticket/getAllTickets")
       setRemaining(res.data.filter(e=>e.status==false))
       let map=new Map()
       for(let key of res.data){

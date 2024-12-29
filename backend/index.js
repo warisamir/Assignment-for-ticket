@@ -16,7 +16,7 @@ mongoose
 app.get("/", (req, res) => {
   return res.send("Welome to ticketing system");
 });
-app.use("/api/ticket", ticketRoutes);
+app.use("/ticket", ticketRoutes);
 app.listen(3000, () => {
   console.log("Server is listening on port 3000 to");
 });
